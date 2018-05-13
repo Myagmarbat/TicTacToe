@@ -1,0 +1,43 @@
+1. initialize
+
+POST http://localhost/tictactoe/init HTTP/1.1
+request body:
+{
+    "size":"3",
+    "player_start":"X" (or "O")
+}
+
+2. Player X move
+POST http://localhost/tictactoe/move/X HTTP/1.1
+request body:
+{
+    "row":"1",
+    "col":"2"
+}
+response body
+{
+    "valid":"true",
+    "row":"1",
+    "col":"2"
+}
+
+3. Player Y move
+GET http://localhost/tictactoe/move/Y HTTP/1.1
+response body
+{
+    "row":"1",
+    "col":"2"
+}
+
+4. isFinished return
+GET http://localhost/tictactoe/isFinished HTTP/1.1
+response body
+{
+    "win":"X" ("O" or ""),
+    "gameover":"true" (or "false")
+}
+
+
+
+
+
