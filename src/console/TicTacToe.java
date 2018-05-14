@@ -39,7 +39,6 @@ public class TicTacToe {
         boolean isFirstTurn = false;
         if(firstTurn.equals("Y")){
             isFirstTurn = true;
-
         }
         Cell cell = null;
         int res = 0;
